@@ -74,7 +74,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                                     <nav className="tgmobile__menu-box">
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="tg-flaticon-close-1" /></div>
                                         <div className="nav-logo">
-                                            <Link href="/"><img src="/assets/img/logo/logo.png" alt="Logo" /></Link>
+                                            <Link href="/"><img src="/assets/img/logo/ocean.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="tgmobile__search">
                                             <form action="#">
@@ -84,12 +84,6 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                                         </div>
                                         <div className="tgmobile__menu-outer">
                                             <MobileMenu />
-                                        </div>
-                                        <div className="tgmenu__action">
-                                            <ul className="list-wrap">
-                                                <li className="header-btn login-btn"><Link href="#" className="btn">Log in</Link></li>
-                                                <li className="header-btn"><Link href="#" className="btn">Try For Free</Link></li>
-                                            </ul>
                                         </div>
                                         <div className="social-links">
                                             <ul className="list-wrap">

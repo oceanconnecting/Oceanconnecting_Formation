@@ -22,20 +22,11 @@ export default function MobileMenu() {
     return (
         <>
             <ul className="navigation">
-                <li className="active menu-item-has-children"><Link href="#">Home</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
-                        <li className="active"><Link href="/">Home One</Link></li>
-                        <li><Link href="/index-2">Home Two</Link></li>
-                        <li><Link href="/pages">Home Three</Link></li>
-                    </ul>
-                    <div className={isActive.key == 1 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(1)}><span className="plus-line" /></div>
+                <li className="active menu-item"><Link href="/">Home</Link>
+
                 </li>
-                <li className="menu-item-has-children"><Link href="#">Courses</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
-                        <li><Link href="/courses">All Courses</Link></li>
-                        <li><Link href="/course-details">Course Details</Link></li>
-                    </ul>
-                    <div className={isActive.key == 2 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(2)}><span className="plus-line" /></div></li>
+                <li className="menu-item-has-children"><Link href="courses">Courses</Link>
+ </li>
                 <li className="menu-item-has-children"><Link href="#">Pages</Link>
                     <ul className="sub-menu" style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
                         <li><Link href="/about-us">About Us</Link></li>
@@ -49,20 +40,8 @@ export default function MobileMenu() {
                         <li><Link href="/contact">contact</Link></li>
                     </ul>
                     <div className={isActive.key == 3 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(3)}><span className="plus-line" /></div></li>
-                <li className="menu-item-has-children"><Link href="#">Shop</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
-                        <li><Link href="/shop">Shop Page</Link></li>
-                        <li><Link href="/shop-details">Shop Details</Link></li>
-                    </ul>
-                    <div className={isActive.key == 4 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(4)}><span className="plus-line" /></div></li>
-                <li className="menu-item-has-children"><Link href="#">Blog</Link>
-                    <ul className="sub-menu" style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
-                        <li><Link href="/blog-grid">Blog Grid</Link></li>
-                        <li><Link href="/blog">Blog Standard</Link></li>
-                        <li><Link href="/blog-details">Blog Details</Link></li>
-                    </ul>
-                    <div className={isActive.key == 5 ? "dropdown-btn open" : "dropdown-btn"} onClick={() => handleToggle(5)}><span className="plus-line" /></div>
-                </li>
+
+
             </ul>
         </>
     )

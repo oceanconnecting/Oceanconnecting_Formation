@@ -2,6 +2,13 @@ import Link from "next/link"
 import MobileMenu from "../MobileMenu"
 import { Menu } from '@headlessui/react'
 export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
+    const pagesMenu = [
+        { name: "About Us", href: "/about-us" },
+        { name: "Our Instructors", href: "/instructors" },
+        { name: "Instructor Details", href: "/instructor-details" },
+        { name: "Our Events", href: "/events" },
+        { name: "Contact", href: "/contact" },
+    ];
     return (
         <>
             <div id="header-fixed-height" />
@@ -45,50 +52,20 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                                             <ul className="navigation">
                                                 <li className="active menu-item"><Link href="/">Home</Link>
                                                 </li>
-                                                <li className="menu-item-has-children"><Link href="#">Courses</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link href="/courses">All Courses</Link></li>
-                                                        <li><Link href="/course-details">Course Details</Link></li>
-                                                    </ul>
+                                                <li className="menu-item"><Link href="/courses">Courses</Link>
                                                 </li>
-                                                <li className="menu-item-has-children"><Link href="#">Pages</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link href="/about-us">About Us</Link></li>
-                                                        <li><Link href="/instructors">Our Instructors</Link></li>
-                                                        <li><Link href="/instructor-details">Instructor Details</Link></li>
-                                                        <li><Link href="/mentors">Our Mentors</Link></li>
-                                                        <li><Link href="/events">Our Events</Link></li>
-                                                        <li><Link href="/events-details">Event Details</Link></li>
-                                                        <li><Link href="/faq">Asked Question</Link></li>
-                                                        <li><Link href="/404">404 Page</Link></li>
-                                                        <li><Link href="/contact">contact</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li className="menu-item-has-children"><Link href="#">Blog</Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link href="/blog-grid">Blog Grid</Link></li>
-                                                        <li><Link href="/blog">Blog Standard</Link></li>
-                                                        <li><Link href="/blog-details">Blog Details</Link></li>
-                                                    </ul>
-                                                </li>
+                                                {pagesMenu.map((page, index) => (
+                                                    <li key={index} className="menu-item">
+                                                        <Link href={page.href}>{page.name}</Link>
+                                                    </li>
+                                                ))}
                                             </ul>
                                         </div>
                                         <div className="tgmenu__search-bar">
                                             <form action="#">
-                                                <input type="text" placeholder="Search For Course . . ." />
-                                                <button type="submit"><i className="flaticon-searching" /></button>
+                                                <input type="text" placeholder="Search For Course . . ."/>
+                                                <button type="submit"><i className="flaticon-searching"/></button>
                                             </form>
-                                        </div>
-                                        <div className="tgmenu__action">
-                                            <ul className="list-wrap">
-                                                <li className="mini-cart-icon">
-                                                    <Link href="/shop" className="cart-count">
-                                                        <img src="/assets/img/icons/cart.svg" alt="cart" />
-                                                        <span className="mini-cart-count">0</span>
-                                                    </Link>
-                                                </li>
-                                                <li className="header-btn"><Link href="/contact" className="btn">Sign Up</Link></li>
-                                            </ul>
                                         </div>
                                     </nav>
                                 </div>

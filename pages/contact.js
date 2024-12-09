@@ -12,19 +12,21 @@ export default function Contact() {
                                 <div className="col-lg-5">
                                     <div className="contact-info-wrap">
                                         <h2 className="title">Keep In Touch With Us</h2>
-                                        <p>Neque convallis cras semper auctor. Libero id faucibus getnvallis.id faucibus nisl tincidunt egetnvallis.</p>
+                                        <p>Neque convallis cras semper auctor. Libero id faucibus getnvallis.id faucibus
+                                            nisl tincidunt egetnvallis.</p>
                                         <ul className="list-wrap">
                                             <li>
                                                 <div className="icon">
-                                                    <i className="flaticon-pin-1" />
+                                                    <i className="flaticon-pin-1"/>
                                                 </div>
                                                 <div className="content">
-                                                    <p>Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi <br /> AGADIR</p>
+                                                    <p>Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi <br/> AGADIR
+                                                    </p>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div className="icon">
-                                                    <i className="flaticon-phone-call" />
+                                                    <i className="flaticon-phone-call"/>
                                                 </div>
                                                 <div className="content">
                                                     <Link href="tel:+212 704-309787">+212 704-309787</Link>
@@ -33,10 +35,11 @@ export default function Contact() {
                                             </li>
                                             <li>
                                                 <div className="icon">
-                                                    <i className="flaticon-email" />
+                                                    <i className="flaticon-email"/>
                                                 </div>
                                                 <div className="content">
-                                                    <Link href="oceanconnecting.ma@gmail.com">oceanconnecting.ma@gmail.com</Link>
+                                                    <Link
+                                                        href="oceanconnecting.ma@gmail.com">oceanconnecting.ma@gmail.com</Link>
 
                                                 </div>
                                             </li>
@@ -50,31 +53,34 @@ export default function Contact() {
                                             <div className="row">
                                                 <div className="col-md-6">
                                                     <div className="form-grp">
-                                                        <input name="name" type="text" placeholder="Name *" required />
+                                                        <input name="name" type="text" placeholder="Name *" required/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-6">
                                                     <div className="form-grp">
-                                                        <input name="email" type="email" placeholder="E-mail *" required />
+                                                        <input name="email" type="email" placeholder="E-mail *"
+                                                               required/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-6">
                                                     <div className="form-grp">
-                                                        <input name="phone" type="number" placeholder="Phone *" required />
+                                                        <input name="phone" type="number" placeholder="Phone *"
+                                                               required/>
                                                     </div>
                                                 </div>
                                                 <div className="col-md-6">
                                                     <div className="form-grp">
-                                                        <input name="subject" type="text" placeholder="Your Subject *" required />
+                                                        <input name="subject" type="text" placeholder="Your Subject *"
+                                                               required/>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="form-grp">
-                                                <textarea name="message" placeholder="Message" required />
+                                                <textarea name="message" placeholder="Message" required/>
                                             </div>
                                             <button type="submit" className="btn">Send Message</button>
                                         </form>
-                                        <p className="ajax-response mb-0" />
+                                        <p className="ajax-response mb-0"/>
                                     </div>
                                 </div>
                             </div>
@@ -83,7 +89,10 @@ export default function Contact() {
                     {/* contact-area-end */}
                     {/* contact-map */}
                     <div className="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48409.69813174607!2d-74.05163325136718!3d40.68264649999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bae694479a3%3A0xb9949385da52e69e!2sBarclays%20Center!5e0!3m2!1sen!2sbd!4v1684309529719!5m2!1sen!2sbd" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3440.013604002247!2d-9.564146524179353!3d30.43571627472893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b786ed856f81%3A0xcfee351cdd94fbfc!2sOcean%20Connecting%20sarl!5e0!3m2!1sfr!2sma!4v1733740058538!5m2!1sfr!2sma"
+                            style={{border: 0}} allowFullScreen
+                            loading="lazy" referrerPolicy="no-referrer-when-downgrade"/>
                     </div>
                 </div>
 

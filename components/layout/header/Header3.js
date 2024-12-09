@@ -73,7 +73,9 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                                 <div className="tgmobile__menu">
                                     <nav className="tgmobile__menu-box">
                                         <div className="close-btn" onClick={handleMobileMenu}><i className="tg-flaticon-close-1" /></div>
-                                        <div className="nav-logo">
+                                        <div className="nav-logo" style={
+                                            {width : "150px",}
+                                        }>
                                             <Link href="/"><img src="/assets/img/logo/ocean.png" alt="Logo" /></Link>
                                         </div>
                                         <div className="tgmobile__search">

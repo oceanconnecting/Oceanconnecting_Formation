@@ -4,9 +4,7 @@ import { Menu } from '@headlessui/react'
 export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
     const pagesMenu = [
         { name: "About Us", href: "/about-us" },
-        { name: "Our Instructors", href: "/instructors" },
-        { name: "Instructor Details", href: "/instructor-details" },
-        { name: "Our Events", href: "/events" },
+
         { name: "Contact", href: "/contact" },
     ];
     return (
@@ -19,7 +17,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                             <div className="col-md-8">
                                 <ul className="tg-header__top-info list-wrap">
                                     <li><i className="flaticon-pin" /> <span>Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi, AGADIR</span></li>
-                                    <li><i className="flaticon-email" /> <Link href="mailto:info@gmail.com">oceanconnecting.ma@gmail.com</Link></li>
+                                    <li><i className="flaticon-email" /> <Link href="mailto:oceanconnecting.ma@gmail.com">oceanconnecting.ma@gmail.com</Link></li>
                                 </ul>
                             </div>
                             <div className="col-md-4">

@@ -19,7 +19,7 @@ const CourseCard = ({ item }) => {
                 {/* Tag - Replace with category or other relevant data */}
                 {/* Course Title */}
                 <h5 className="title">
-                    {item.title}
+                   {item.title}
                 </h5>
                 {/* Course Description */}
                 <p>{item.description}</p>
@@ -40,7 +40,7 @@ const CourseCard = ({ item }) => {
                 {/* Bottom Section */}
                 <div className="courses__item-bottom">
                     <div className="course__price">
-                        <h3 className="price">Contact us</h3>
+                        <Link href="/contact"><h3 className="price">Contact us</h3></Link>
                     </div>
                     <div className="courses__item-rating">
                         <i className="fas fa-star" />

@@ -12,8 +12,7 @@ export default function Contact() {
                                 <div className="col-lg-5">
                                     <div className="contact-info-wrap">
                                         <h2 className="title">Keep In Touch With Us</h2>
-                                        <p>Neque convallis cras semper auctor. Libero id faucibus getnvallis.id faucibus
-                                            nisl tincidunt egetnvallis.</p>
+                                        <p></p>
                                         <ul className="list-wrap">
                                             <li>
                                                 <div className="icon">

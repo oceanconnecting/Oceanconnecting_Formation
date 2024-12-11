@@ -5,8 +5,9 @@ const CourseCard = ({ item }) => {
         <div className="courses__item-two shine__animate-item">
             {/* Course Thumbnail */}
             <div className="courses__item-two-thumb">
+                <Link href={`/course/${item.id}`} className="shine__animate-link">
                     <img src={item.img[0]} alt={item.title} />
-
+                </Link>
                 <div className="author">
                     <Link href={`/course/${item.id}`}>
 
@@ -17,12 +18,10 @@ const CourseCard = ({ item }) => {
             {/* Course Content */}
             <div className="courses__item-two-content">
                 {/* Tag - Replace with category or other relevant data */}
-
                 {/* Course Title */}
                 <h5 className="title">
-                    {item.title}
+                    <Link href={`/course/${item.id}`}>{item.title}</Link>
                 </h5>
-
                 {/* Course Description */}
                 <p>{item.description}</p>
 

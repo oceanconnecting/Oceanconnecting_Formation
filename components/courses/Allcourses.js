@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux"
-import jobs from "../../data/courses.json"
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 import {
     addPerPage,
     addSort,
@@ -8,117 +8,94 @@ import {
     clearInstructor,
     clearLanguage,
     clearPrice,
-} from "../../features/courseFilterSlice"
+} from "../../features/courseFilterSlice";
 import {
     clearCategoryToggle,
     clearDifficultyToggle,
     clearInstructorToggle,
     clearLanguageToggle,
-    clearPriceToggle
-} from "../../features/courseSlice"
-import CourseCard from "./CourseCard"
+    clearPriceToggle,
+} from "../../features/courseSlice";
+import CourseCard from "./CourseCard";
 
 const Allcourses = () => {
-    const { courseList, courseSort } = useSelector((state) => state.courseFilter)
-    const {
-        category,
-        instructor,
-        price,
-        language,
-        difficulty,
-    } = courseList || {}
+    const [courses, setCourses] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
+    const { courseList, courseSort } = useSelector((state) => state.courseFilter);
+    const { category, instructor, price, language, difficulty } = courseList || {};
+    const { sort, perPage } = courseSort;
+    const dispatch = useDispatch();
 
-    const { sort, perPage } = courseSort
-    const dispatch = useDispatch()
+    // Fetch courses from the API
+    useEffect(() => {
+        const fetchCourses = async () => {
+            try {
+                setLoading(true);
+                setError(null);
+                const response = await fetch("https://hono-nextjs-l1in.vercel.app/api/formations"); // Replace with your API endpoint
+                if (!response.ok) {
+                    throw new Error("Failed to fetch courses");
+                }
+                const data = await response.json();
+                setCourses(data);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
 
-    // category filter
-    const categoryFilter = (item) =>
-        category?.length !== 0
-            ? category?.includes(
-                item?.category?.split(" ").join("").toLocaleLowerCase()
-            )
-            : item
+        fetchCourses();
+    }, []);
 
-    // Instructors filter
-    const instructorFilter = (item) =>
-        instructor?.length !== 0
-            ? instructor?.includes(
-                item?.instructor?.split(" ").join("").toLocaleLowerCase()
-            )
-            : item
+    // Placeholder filters (update based on your requirements)
+    const categoryFilter = (item) => item; // Add logic for category filtering
+    const languageFilter = (item) => item; // Add logic for language filtering
 
-    // price filter
-    const priceFilter = (item) =>
-        price?.length !== 0
-            ? price?.includes(
-                item?.price?.split(" ").join("").toLocaleLowerCase()
-            )
-            : item
-
-    // language filter
-    const languageFilter = (item) =>
-        language?.length !== 0
-            ? language?.includes(
-                item?.language?.split(" ").join("").toLocaleLowerCase()
-            )
-            : item
-
-    // difficulty filter
-    const difficultyFilter = (item) =>
-        difficulty?.length !== 0
-            ? difficulty?.includes(
-                item?.difficulty?.split(" ").join("").toLocaleLowerCase()
-            )
-            : item
-
-    // sort filter
+    // Sort filter
     const sortFilter = (a, b) =>
-        sort === "des" ? a.id > b.id && -1 : a.id < b.id && -1
+        sort === "des" ? a.id > b.id && -1 : a.id < b.id && -1;
 
-    let content = jobs
+    // Render filtered and sorted content
+    let content = courses
         ?.filter(categoryFilter)
-        ?.filter(instructorFilter)
-        ?.filter(priceFilter)
         ?.filter(languageFilter)
-        ?.filter(difficultyFilter)
         ?.sort(sortFilter)
         .slice(perPage.start, perPage.end !== 0 ? perPage.end : 12)
         ?.map((item) => (
             <div className="col" key={item.id}>
-
                 <CourseCard item={item} />
             </div>
+        ));
 
-            // End all jobs
-        ))
-
-    // sort handler
     const sortHandler = (e) => {
-        dispatch(addSort(e.target.value))
-    }
+        dispatch(addSort(e.target.value));
+    };
 
-    // per page handler
     const perPageHandler = (e) => {
-        const pageData = JSON.parse(e.target.value)
-        dispatch(addPerPage(pageData))
-    }
+        const pageData = JSON.parse(e.target.value);
+        dispatch(addPerPage(pageData));
+    };
 
-    // clear all filters
     const clearAll = () => {
-        dispatch(clearInstructor())
-        dispatch(clearCategory())
-        dispatch(clearPrice())
-        dispatch(clearLanguage())
-        dispatch(clearDifficulty())
-        dispatch(clearInstructorToggle())
-        dispatch(clearCategoryToggle())
-        dispatch(clearPriceToggle())
-        dispatch(clearLanguageToggle())
-        dispatch(clearDifficultyToggle())
-        dispatch(addSort(""))
-        dispatch(addPerPage({ start: 0, end: 0 }))
-    }
+        dispatch(clearCategory());
+        dispatch(clearLanguage());
+        dispatch(clearPrice());
+        dispatch(clearDifficulty());
+        dispatch(clearInstructor());
+        dispatch(clearCategoryToggle());
+        dispatch(clearLanguageToggle());
+        dispatch(clearPriceToggle());
+        dispatch(clearDifficultyToggle());
+        dispatch(clearInstructorToggle());
+        dispatch(addSort(""));
+        dispatch(addPerPage({ start: 0, end: 0 }));
+    };
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error}</p>;
 
     return (
         <>
@@ -132,29 +109,24 @@ const Allcourses = () => {
                     <div className="col-md-6">
                         <div className="d-flex justify-content-center justify-content-md-end align-items-center">
                             <div>
-                                {
-                                    category?.length !== 0 ||
-                                        instructor?.length !== 0 ||
-                                        price?.length !== 0 ||
-                                        language?.length !== 0 ||
-                                        difficulty?.length !== 0 ||
-                                        sort !== "" ||
-                                        perPage.start !== 0 ||
-                                        perPage.end !== 0
-                                        ? (
-                                            <button
-                                                onClick={clearAll}
-                                                className="btn btn-reset text-nowrap me-2"
-                                            >
-                                                Reset
-                                            </button>
-                                        ) : undefined
-                                }
+                                {category?.length !== 0 ||
+                                language?.length !== 0 ||
+                                sort !== "" ||
+                                perPage.start !== 0 ||
+                                perPage.end !== 0 ? (
+                                    <button
+                                        onClick={clearAll}
+                                        className="btn btn-reset text-nowrap me-2"
+                                    >
+                                        Reset
+                                    </button>
+                                ) : undefined}
                             </div>
                             <div className="shop-top-right m-0 ms-md-auto">
                                 <select
                                     value={sort}
-                                    name="orderby" className="orderby"
+                                    name="orderby"
+                                    className="orderby"
                                     onChange={sortHandler}
                                 >
                                     <option value="">Sort by (default)</option>
@@ -210,9 +182,8 @@ const Allcourses = () => {
             <div className="row courses__grid-wrap row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
                 {content}
             </div>
-
         </>
-    )
-}
+    );
+};
 
-export default Allcourses
+export default Allcourses;

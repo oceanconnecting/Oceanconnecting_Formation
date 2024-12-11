@@ -13,8 +13,7 @@ export default function Cta4() {
                                         Experiences</h2>
                                 </div>
                                 <div className="cta__desc">
-                                    <p>Borem ipsum dolor sit amet, consectetur adipiscing eliawe awUt elit ellus, luctus nec
-                                        ullamcorper mattisBorem</p>
+                                    <p></p>
                                 </div>
                                 <div className="tg-button-wrap justify-content-center justify-content-md-end">
                                     <Link href="/contact" className="btn white-btn tg-svg"><span className="text">Become an

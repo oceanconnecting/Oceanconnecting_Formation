@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout"
 import CourseSlider1 from "@/components/slider/CourseSlider1"
 import Link from "next/link"
 
+
 export default function InstructorDetails() {
     return (
         <>

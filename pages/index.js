@@ -19,14 +19,13 @@ export default function Home3() {
                 <QuickAction1 />
                 <Course3 />
                 <Fact2 />
-                <Categories3 />
+
                 <Cta2 />
-                <Events1 />
+
                 <div className="area-bg" data-background="/assets/img/bg/area_bg.jpg">
                     <Testimonial3 />
-                    <Brand2 />
                 </div>
-                <Blog3 />
+
                 <Cta4 />
             </Layout>
         </>

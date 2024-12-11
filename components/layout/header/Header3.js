@@ -69,34 +69,22 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                                 </div>
                                 {/* Mobile Menu  */}
                                 <div className="tgmobile__menu">
-                                    <nav className="tgmobile__menu-box">
-                                        <div className="close-btn" onClick={handleMobileMenu}><i className="tg-flaticon-close-1" /></div>
-                                        <div className="nav-logo" style={
-                                            {width : "150px",}
-                                        }>
-                                            <Link href="/"><img src="/assets/img/logo/ocean.png" alt="Logo" /></Link>
-                                        </div>
-                                        <div className="tgmobile__search">
-                                            <form action="#">
-                                                <input type="text" placeholder="Search here..." />
-                                                <button><i className="fas fa-search" /></button>
-                                            </form>
-                                        </div>
-                                        <div className="tgmobile__menu-outer">
-                                            <MobileMenu />
-                                        </div>
-                                        <div className="social-links">
-                                            <ul className="list-wrap">
-                                                <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-twitter" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-instagram" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>
-                                                <li><Link href="#"><i className="fab fa-youtube" /></Link></li>
+                                    <div className="tgmobile__menu-outer">
+                                        <nav>
+                                            <ul className="navigation">
+                                                <li className="menu-item"><Link href="/">Home</Link></li>
+                                                <li className="menu-item"><Link href="/courses">Courses</Link></li>
+                                                {pagesMenu.map((page, index) => (
+                                                    <li key={index} className="menu-item">
+                                                        <Link href={page.href}>{page.name}</Link>
+                                                    </li>
+                                                ))}
                                             </ul>
-                                        </div>
-                                    </nav>
+                                        </nav>
+                                    </div>
+
                                 </div>
-                                <div className="tgmobile__menu-backdrop" onClick={handleMobileMenu} />
+                                <div className="tgmobile__menu-backdrop" onClick={handleMobileMenu}/>
                                 {/* End Mobile Menu */}
                             </div>
                         </div>

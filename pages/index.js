@@ -17,7 +17,6 @@ export default function Home3() {
             <Layout headerStyle={3} footerStyle={1}>
                 <Slider1 />
                 <QuickAction1 />
-                <Course3 />
                 <Fact2 />
 
                 <Cta2 />

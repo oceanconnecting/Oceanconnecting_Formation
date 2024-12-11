@@ -5,9 +5,8 @@ const CourseCard = ({ item }) => {
         <div className="courses__item-two shine__animate-item">
             {/* Course Thumbnail */}
             <div className="courses__item-two-thumb">
-                <Link href={`/course/${item.id}`} className="shine__animate-link">
                     <img src={item.img[0]} alt={item.title} />
-                </Link>
+
                 <div className="author">
                     <Link href={`/course/${item.id}`}>
 
@@ -21,7 +20,7 @@ const CourseCard = ({ item }) => {
 
                 {/* Course Title */}
                 <h5 className="title">
-                    <Link href={`/course/${item.id}`}>{item.title}</Link>
+                    {item.title}
                 </h5>
 
                 {/* Course Description */}

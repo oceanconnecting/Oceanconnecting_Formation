@@ -7,7 +7,7 @@ import Footer1 from './footer/Footer1'
 import Header1 from "./header/Header1"
 import Header2 from './header/Header2'
 import Header3 from "./header/Header3"
-
+import Script from "next/script";
 export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumbTitle, children }) {
     const [scroll, setScroll] = useState(0)
     // Moblile Menu
@@ -29,6 +29,24 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
 
     return (
         <>
+            <Script
+                strategy="afterInteractive"
+                src="https://www.googletagmanager.com/gtag/js?id=G-LHCVR17P5K"
+            />
+            <Script
+                id="google-analytics"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-LHCVR17P5K', {
+                page_path: window.location.pathname,
+              });
+            `,
+                }}
+            />
             <PageHead headTitle={headTitle} />
 
             {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}

@@ -1,23 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import {
-    addPerPage,
-    addSort,
-    clearCategory,
-    clearDifficulty,
-    clearInstructor,
-    clearLanguage,
-    clearPrice,
-} from "../../features/courseFilterSlice";
-import {
-    clearCategoryToggle,
-    clearDifficultyToggle,
-    clearInstructorToggle,
-    clearLanguageToggle,
-    clearPriceToggle,
-} from "../../features/courseSlice";
-import CourseCard from "./CourseCard";
-const Allcourses = () => {
+import CourseCard from "@/components/courses/CourseCard";
+const Gallary = () => {
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -102,7 +86,7 @@ const Allcourses = () => {
                 <div className="row align-items-center">
                     <div className="col-md-6">
                         <div className="shop-top-left">
-                            <p>We found {content?.length} courses for you</p>
+                            <p> {content?.length} gallary for you</p>
                         </div>
                     </div>
                     <div className="col-md-6">
@@ -121,58 +105,7 @@ const Allcourses = () => {
                                     </button>
                                 ) : undefined}
                             </div>
-                            <div className="shop-top-right m-0 ms-md-auto">
-                                <select
-                                    value={sort}
-                                    name="orderby"
-                                    className="orderby"
-                                    onChange={sortHandler}
-                                >
-                                    <option value="">Sort by (default)</option>
-                                    <option value="asc">Newest</option>
-                                    <option value="des">Oldest</option>
-                                </select>
-                            </div>
-                            <div>
-                                <select
-                                    onChange={perPageHandler}
-                                    className="chosen-single form-select ms-3 "
-                                    value={JSON.stringify(perPage)}
-                                >
-                                    <option
-                                        value={JSON.stringify({
-                                            start: 0,
-                                            end: 0,
-                                        })}
-                                    >
-                                        All
-                                    </option>
-                                    <option
-                                        value={JSON.stringify({
-                                            start: 0,
-                                            end: 10,
-                                        })}
-                                    >
-                                        10 per page
-                                    </option>
-                                    <option
-                                        value={JSON.stringify({
-                                            start: 0,
-                                            end: 20,
-                                        })}
-                                    >
-                                        20 per page
-                                    </option>
-                                    <option
-                                        value={JSON.stringify({
-                                            start: 0,
-                                            end: 30,
-                                        })}
-                                    >
-                                        30 per page
-                                    </option>
-                                </select>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -185,4 +118,4 @@ const Allcourses = () => {
     );
 };
 
-export default Allcourses;
+export default Gallary;

@@ -50,7 +50,6 @@ export default function Layout({ headerStyle, footerStyle, headTitle, breadcrumb
           `,
                 }}
             />
-
             <PageHead headTitle={headTitle} />
 
             {!headerStyle && <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />}

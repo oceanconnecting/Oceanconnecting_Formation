@@ -52,6 +52,8 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                                                 </li>
                                                 <li className="menu-item"><Link href="/courses">Courses</Link>
                                                 </li>
+                                                <li className="menu-item"><Link href="/gallary">Gallary</Link>
+                                                </li>
                                                 {pagesMenu.map((page, index) => (
                                                     <li key={index} className="menu-item">
                                                         <Link href={page.href}>{page.name}</Link>

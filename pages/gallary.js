@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import CourseCard from "@/components/courses/CourseCard";
+import GallaryCard from "@/components/gallary/GallaryCard";
+import Layout from "@/components/layout/Layout";
 const Gallary = () => {
     const [courses, setCourses] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -17,12 +18,18 @@ const Gallary = () => {
             try {
                 setLoading(true);
                 setError(null);
-                const response = await fetch("https://hono-nextjs-l1in.vercel.app/api/formations"); // Replace with your API endpoint
+                const response = await fetch("https://hono-on-vercel123-54cp.vercel.app/api/galleries"); // Replace with your API endpoint
                 if (!response.ok) {
                     throw new Error("Failed to fetch courses");
                 }
                 const data = await response.json();
-                setCourses(data);
+
+                // Filter by type
+                const filteredData = data.filter(
+                    (item) => item.type === "Formation" || item.type === "Formation-Nurs"
+                );
+
+                setCourses(filteredData);
             } catch (error) {
                 setError(error.message);
             } finally {
@@ -39,7 +46,7 @@ const Gallary = () => {
 
     // Sort filter
     const sortFilter = (a, b) =>
-        sort === "des" ? a.id > b.id && -1 : a.id < b.id && -1;
+        sort === "des" ? (a.id > b.id ? -1 : 1) : (a.id < b.id ? -1 : 1);
 
     // Render filtered and sorted content
     let content = courses
@@ -49,7 +56,7 @@ const Gallary = () => {
         .slice(perPage.start, perPage.end !== 0 ? perPage.end : 12)
         ?.map((item) => (
             <div className="col" key={item.id}>
-                <CourseCard item={item} />
+                <GallaryCard item={item} />
             </div>
         ));
 
@@ -82,13 +89,10 @@ const Gallary = () => {
 
     return (
         <>
+            <Layout headerStyle={3} footerStyle={1} breadcrumbTitle="Gallary">
             <div className="shop-top-wrap courses-top-wrap">
                 <div className="row align-items-center">
-                    <div className="col-md-6">
-                        <div className="shop-top-left">
-                            <p> {content?.length} gallary for you</p>
-                        </div>
-                    </div>
+
                     <div className="col-md-6">
                         <div className="d-flex justify-content-center justify-content-md-end align-items-center">
                             <div>
@@ -105,7 +109,6 @@ const Gallary = () => {
                                     </button>
                                 ) : undefined}
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -114,6 +117,9 @@ const Gallary = () => {
             <div className="row courses__grid-wrap row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 row-cols-sm-1">
                 {content}
             </div>
+
+            {/* Inline Styles */}
+            </Layout>
         </>
     );
 };

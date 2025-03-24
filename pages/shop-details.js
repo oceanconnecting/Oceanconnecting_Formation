@@ -98,7 +98,9 @@ export default function ShopDetails() {
                                                 <span className="title">Share This Product:</span>
                                                 <Link href="#"><i className="fab fa-facebook-f" /></Link>
                                                 <Link href="#"><i className="fab fa-twitter" /></Link>
-                                                <Link href="#"><i className="fab fa-instagram" /></Link>
+                                                <Link href="https://www.instagram.com/oceanconnecting.ma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                            <i className="fab fa-instagram" />
+                          </Link>
                                                 <Link href="#"><i className="fab fa-youtube" /></Link>
                                             </li>
                                         </ul>

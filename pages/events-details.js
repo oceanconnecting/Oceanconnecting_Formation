@@ -66,9 +66,11 @@ export default function EventDetails() {
                                                     <li><i className="flaticon-flash" />Category <span>Desing</span></li>
                                                     <li><i className="flaticon-share" />Share
                                                         <ul className="list-wrap event-social">
-                                                            <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+                                                            <li><Link href="https://www.facebook.com/the.ocean.connecting"><i className="fab fa-facebook-f" /></Link></li>
                                                             <li><Link href="#"><i className="fab fa-twitter" /></Link></li>
-                                                            <li><Link href="#"><i className="fab fa-instagram" /></Link></li>
+                                                            <Link href="https://www.instagram.com/oceanconnecting.ma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                            <i className="fab fa-instagram" />
+                          </Link>
                                                             <li><Link href="#"><i className="fab fa-youtube" /></Link></li>
                                                         </ul>
                                                     </li>

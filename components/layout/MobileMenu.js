@@ -27,28 +27,17 @@ export default function MobileMenu() {
                 <li className="active menu-item">
                     <Link href="/">Home</Link>
                 </li>
-                <li className="menu-item-has-children">
+                <li className="menu-item">
                     <Link href="/courses">Courses</Link>
                 </li>
-                <li className="menu-item-has-children">
-                    <Link href="#">Pages</Link>
-                    {/* Dropdown menu */}
-                    <ul
-                        className="sub-menu"
-                        style={{
-                            display: isActive.key === "pages" ? "block" : "none",
-                        }}
-                    >
-                        <li><Link href="/about-us">About Us</Link></li>
-                        <li><Link href="/contact">Contact</Link></li>
-                    </ul>
-                    {/* Toggle button */}
-                    <div
-                        className={isActive.key === "pages" ? "dropdown-btn open" : "dropdown-btn"}
-                        onClick={() => handleToggle("pages")}
-                    >
-                        <span className="plus-line" />
-                    </div>
+                <li className="menu-item">
+                    <Link href="/gallary">Gallary</Link>
+                </li>
+                <li className="menu-item">
+                    <Link href="/about-us">About Us</Link>
+                </li>
+                <li className="menu-item">
+                    <Link href="/contact">Contact</Link>
                 </li>
             </ul>
         </>

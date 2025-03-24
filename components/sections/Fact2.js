@@ -21,7 +21,7 @@ export default function Fact2() {
                                     <i className="flaticon-webinar" />
                                 </div>
                                 <div className="fact__content-two">
-                                    <h3 className="count"><CounterUp end={325200} /></h3>
+                                    <h3 className="count"><CounterUp end={5200} /></h3>
                                     <p>Students Enrolled</p>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@ export default function Fact2() {
                                     <i className="flaticon-graduates" />
                                 </div>
                                 <div className="fact__content-two">
-                                    <h3 className="count"><CounterUp end={11399} /></h3>
+                                    <h3 className="count"><CounterUp end={399} /></h3>
                                     <p>Top Class Courses</p>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ export default function Fact2() {
                                     <i className="flaticon-countries" />
                                 </div>
                                 <div className="fact__content-two">
-                                    <h3 className="count"><CounterUp end={312} /></h3>
+                                    <h3 className="count"><CounterUp end={12} /></h3>
                                     <p>World Countries</p>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@ export default function Fact2() {
                                     <i className="flaticon-trophy" />
                                 </div>
                                 <div className="fact__content-two">
-                                    <h3 className="count"><CounterUp end={12} /></h3>
+                                    <h3 className="count"><CounterUp end={2} /></h3>
                                     <p>Award We Received</p>
                                 </div>
                             </div>

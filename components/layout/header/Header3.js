@@ -23,7 +23,7 @@ export default function Header3({ scroll, isMobileMenu, handleMobileMenu }) {
                             <div className="col-md-4">
                                 <ul className="tg-header__top-social list-wrap">
                                     <li>Follow Us On :</li>
-                                    <li><Link href="#"><i className="fab fa-facebook-f" /></Link></li>
+                                    <li><Link href="https://www.facebook.com/the.ocean.connecting"><i className="fab fa-facebook-f" /></Link></li>
                                     <li><Link href="#"><i className="fab fa-twitter" /></Link></li>
                                     <li><Link href="#"><i className="fab fa-whatsapp" /></Link></li>
                                     <li><Link href="#"><i className="fab fa-linkedin-in" /></Link></li>

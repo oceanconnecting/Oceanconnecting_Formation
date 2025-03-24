@@ -32,10 +32,6 @@ const AllShop = () => {
     const { sort, perPage } = bookSort
 
     const dispatch = useDispatch()
-
-
-
-
     // category filter
     const categoryFilter = (item) =>
         category?.length !== 0

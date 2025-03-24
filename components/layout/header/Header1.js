@@ -1,7 +1,7 @@
 import Link from "next/link"
 import MobileMenu from "../MobileMenu"
 
-export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
+export default function Header1({ scroll, handleMobileMenu }) {
     return (
         <>
             <header>

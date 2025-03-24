@@ -1,7 +1,7 @@
 import Link from "next/link"
 import MobileMenu from "../MobileMenu"
 import { Menu } from '@headlessui/react'
-export default function Header2({ scroll, isMobileMenu, handleMobileMenu }) {
+export default function Header2({ scroll, handleMobileMenu }) {
     return (
         <>
             <div id="header-fixed-height" />

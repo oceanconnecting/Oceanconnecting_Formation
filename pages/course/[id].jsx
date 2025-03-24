@@ -3,19 +3,14 @@ import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
-import courses from "../../data/courses.json"
+
 
 const CourseSingle = () => {
     const router = useRouter()
     const [course, setCourse] = useState({})
     const id = router.query.id
 
-    useEffect(() => {
-        if (!id) <h1>Loading...</h1>
-        else setCourse(courses.find((item) => item.id == id))
-        return () => { }
-    }, [id])
-
+ 
     const [activeIndex, setActiveIndex] = useState(1)
     const handleOnClick = (index) => {
         setActiveIndex(index)

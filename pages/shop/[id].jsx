@@ -2,20 +2,14 @@ import Layout from "@/components/layout/Layout"
 import ShopRelatedSlider1 from "@/components/slider/ShopRelatedSlider1"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
-import books from "../../data/books.json"
+import { useState } from "react"
 
 const BookSingle = () => {
     const router = useRouter()
     const [book, setBook] = useState({})
     const id = router.query.id
 
-    useEffect(() => {
-        if (!id) <h1>Loading...</h1>
-        else setBook(books.find((item) => item.id == id))
-        return () => { }
-    }, [id])
-
+  
     const [activeIndex, setActiveIndex] = useState(1)
     const handleOnClick = (index) => {
         setActiveIndex(index)

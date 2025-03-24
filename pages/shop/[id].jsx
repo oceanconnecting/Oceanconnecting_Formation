@@ -1,3 +1,4 @@
+import React from "react"
 import Layout from "@/components/layout/Layout"
 import ShopRelatedSlider1 from "@/components/slider/ShopRelatedSlider1"
 import Link from "next/link"

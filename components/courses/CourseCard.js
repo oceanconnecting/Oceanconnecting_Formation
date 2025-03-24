@@ -30,7 +30,7 @@ const CourseCard = ({ item }) => {
                         <i className="flaticon-file" /> 5 Modules
                     </li>
                     <li>
-                        <i className="flaticon-timer" /> 3 Months
+                        <i className="flaticon-timer" /> 3 to 6 Months
                     </li>
                     <li>
                         <i className="flaticon-user-1" /> 30 Students

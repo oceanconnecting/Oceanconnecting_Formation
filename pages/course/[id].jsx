@@ -17,7 +17,7 @@ const CourseSingle = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch(`http://localhost:3000/api/course/${id}`);
+        const response = await fetch(`/api/course/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch courses");
         }

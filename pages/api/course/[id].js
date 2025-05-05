@@ -763,7 +763,7 @@ const testDataCourse = [
     title: "Bus and Truck Driving Training",
     description: "Bus and truck drivers operate commercial vehicles to safely transport passengers or goods over designated routes and distances.",
     img: [
-      "https://res.cloudinary.com/dtcfvpu6n/image/upload/fl_preserve_transparency/v1746441263/Trucker_o9ioej.jpg?_s=public-apps"
+      "https://res.cloudinary.com/dtcfvpu6n/image/upload/fl_preserve_transparency/v1746443931/Trucker_cvr_rknfu5.jpg?_s=public-apps"
     ],
     details: "This training prepares individuals to become skilled bus and truck drivers capable of safely operating commercial vehicles. It covers regulations, road safety, vehicle maintenance, cargo/passenger handling, and professional conduct. Trainees will learn how to operate buses on scheduled routes and trucks for freight transport over various distances. The program includes theoretical and practical modules, driving simulations, and on-road practice to ensure competence and confidence behind the wheel.",
     duration: "100h",

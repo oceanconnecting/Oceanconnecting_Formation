@@ -269,77 +269,7 @@ const CourseSingle = () => {
                         </div>
                       </div>
 
-                      <div className="courses__details-instructors">
-                        <h4 className="title">Your Instructors</h4>
-                        <div className="courses__instructors-list">
-                          {course.instructors?.map((instructor, index) => (
-                            <div
-                              className="courses__instructors-item"
-                              key={index}
-                            >
-                              <div className="courses__instructors-thumb">
-                                <Link href="/instructor-details">
-                                  <img
-                                    src={
-                                      instructor.img ||
-                                      "/assets/img/courses/details_instructors01.jpg"
-                                    }
-                                    alt="img"
-                                  />
-                                </Link>
-                              </div>
-                              <div className="courses__instructors-content">
-                                <h5 className="name">
-                                  <Link href="/instructor-details">
-                                    {instructor.name}
-                                  </Link>
-                                </h5>
-                                <span className="designation">
-                                  {instructor.title}
-                                </span>
-                                <ul className="meta list-wrap d-flex flex-wrap">
-                                  <li>
-                                    <i className="flaticon-user-1" />{" "}
-                                    {instructor.students} Students
-                                  </li>
-                                  <li>
-                                    <i className="flaticon-file" />{" "}
-                                    {course.lessons || 0} Lessons
-                                  </li>
-                                  <li>
-                                    <div className="rating">
-                                      {Array.from({
-                                        length: Math.round(
-                                          instructor.rating || 0
-                                        ),
-                                      }).map((_, i) => (
-                                        <i key={i} className="fas fa-star" />
-                                      ))}
-                                      <span className="average">
-                                        ({instructor.rating})
-                                      </span>
-                                    </div>
-                                  </li>
-                                </ul>
-                                <p>{instructor.bio}</p>
-                                <div className="tg-button-wrap">
-                                  <Link
-                                    href="/instructor-details"
-                                    className="btn btn-border tg-svg"
-                                  >
-                                    <span className="text">See More</span>{" "}
-                                    <span
-                                      className="svg-icon"
-                                      id="svg-btn1"
-                                      data-svg-icon="assets/img/icons/btn-arrow.svg"
-                                    />
-                                  </Link>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                     
                     </div>
 
                     <div
@@ -443,12 +373,7 @@ const CourseSingle = () => {
                       <VideoPopup />
                     </div>
                     <div className="event-cost-wrap">
-                      <h4 className="price">
-                        <strong>Cost:</strong>${course.price || "0.00"}
-                        {course.discount_price && (
-                          <span>${course.discount_price}</span>
-                        )}
-                      </h4>
+                     
                       <Link href="#" className="btn">
                         Enroll Now
                       </Link>
@@ -509,27 +434,7 @@ const CourseSingle = () => {
                     </div>
                   </div>
 
-                  <div className="blog-widget">
-                    <h4 className="widget-title">Related Courses</h4>
-                    <div className="rc-post-item">
-                      <div className="rc-post-thumb">
-                        <Link href="/course-details">
-                          <img
-                            src="/assets/img/blog/blog_standard01.jpg"
-                            alt="img"
-                          />
-                        </Link>
-                      </div>
-                      <div className="rc-post-content">
-                        <h4 className="title">
-                          <Link href="/course-details">
-                            Mastering Data Fundamentals
-                          </Link>
-                        </h4>
-                        <span className="price">$22.00</span>
-                      </div>
-                    </div>
-                  </div>
+                 
                 </aside>
               </div>
             </div>

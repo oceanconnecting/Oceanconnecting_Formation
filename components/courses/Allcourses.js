@@ -62,7 +62,7 @@ const Allcourses = () => {
         ?.filter(categoryFilter)
         ?.filter(languageFilter)
         ?.sort(sortFilter)
-        .slice(perPage.start, perPage.end !== 0 ? perPage.end : 12)
+
         ?.map((item) => (
             <div className="col" key={item.id}>
                 <CourseCard item={item} />

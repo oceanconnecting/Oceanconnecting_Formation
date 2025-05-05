@@ -9,7 +9,7 @@ const testDataCourse = [
     ],
     details: "Learn New Languages and Move Forward",
     duration: "15h",
-    students: 85,
+    students: 15,
     lessons: 20,
     rating: 4.7,
     price: 99.99,
@@ -56,7 +56,7 @@ const testDataCourse = [
       {
         name: "Maria Gonzales",
         title: "Linguist & Translator",
-        students: 1200,
+        students: 10,
         rating: 4.9,
         img: "",
         bio: "Maria has been teaching languages for over 10 years and speaks 6 languages fluently. Her passion is connecting cultures through communication.",
@@ -74,7 +74,7 @@ const testDataCourse = [
     details:
       "Elevate your career in the aviation industry with our comprehensive Airport Check-in Agent Training at Ocean connecting. This program equips professionals with the essential skills and knowledge to manage passenger check-in efficiently, ensuring smooth airport operations.",
     duration: "20h",
-    students: 120,
+    students: 10,
     lessons: 25,
     rating: 4.5,
     price: 149.99,
@@ -121,7 +121,7 @@ const testDataCourse = [
       {
         name: "John Smith",
         title: "Aviation Specialist",
-        students: 800,
+        students: 80,
         rating: 4.7,
         img: "",
         bio: "John has over 15 years of experience in airport operations and training. He specializes in customer service and operational efficiency.",
@@ -138,7 +138,7 @@ const testDataCourse = [
     details:
       "Transform your passion for music into a professional career with our comprehensive DJ Training at Ocean connecting. This program is designed to equip aspiring DJs with the skills necessary to thrive in the music industry, whether you're just starting or looking to refine your craft.",
     duration: "30h",
-    students: 200,
+    students: 20,
     lessons: 35,
     rating: 4.8,
     price: 199.99,
@@ -185,7 +185,7 @@ const testDataCourse = [
       {
         name: "Alex Johnson",
         title: "Professional DJ",
-        students: 1500,
+        students: 10,
         rating: 4.9,
         img: "",
         bio: "Alex has been a touring DJ for 12 years, performing at major clubs and festivals worldwide. He specializes in electronic dance music.",
@@ -203,7 +203,7 @@ const testDataCourse = [
     details:
       "This training offers a comprehensive experience for sailing enthusiasts, including theoretical and practical courses on safety, sailing techniques, and coastal and offshore navigation. Sessions are led by experienced instructors and include intensive sea practice. Participants can obtain recognized certifications, allowing them to pilot various types of boats and sailboats. Join us to develop your nautical skills and experience an unforgettable maritime adventure!",
     duration: "40h",
-    students: 75,
+    students: 15,
     lessons: 30,
     rating: 4.6,
     price: 299.99,
@@ -250,7 +250,7 @@ const testDataCourse = [
       {
         name: "Captain Robert Taylor",
         title: "Master Mariner",
-        students: 500,
+        students: 15,
         rating: 4.8,
         img: "",
         bio: "With 20 years of sailing experience, Captain Robert has trained hundreds of students in both recreational and professional boating.",
@@ -268,7 +268,7 @@ const testDataCourse = [
     details:
       "The Home & Family training is designed to provide practical skills and in-depth knowledge on managing domestic life and family relationships. It covers various topics from home organization to family financial management, communication techniques, and conflict resolution. The goal is to provide participants with the necessary tools to create a harmonious and well-organized family environment.",
     duration: "12h",
-    students: 150,
+    students: 15,
     lessons: 15,
     rating: 4.4,
     price: 79.99,
@@ -311,7 +311,7 @@ const testDataCourse = [
       {
         name: "Dr. Sarah Williams",
         title: "Family Counselor",
-        students: 900,
+        students: 19,
         rating: 4.7,
         img: "",
         bio: "Dr. Williams has been helping families improve their dynamics for 15 years through practical, research-based methods.",
@@ -328,7 +328,7 @@ const testDataCourse = [
     details:
       "The VAR (Value Added Resellers) installation and usage training aims to provide professionals with the skills needed to install, configure, and use VAR technology solutions effectively. It covers hardware and software installation steps, advanced configuration, and daily use of tools and applications. Participants also learn to provide technical support, diagnose and resolve issues, perform preventive maintenance, and optimize solution performance. This training is essential for effective VAR solution management and ensuring optimal system performance.",
     duration: "25h",
-    students: 60,
+    students: 16,
     lessons: 22,
     rating: 4.3,
     price: 249.99,
@@ -374,7 +374,7 @@ const testDataCourse = [
       {
         name: "Michael Chen",
         title: "IT Solutions Architect",
-        students: 700,
+        students: 17,
         rating: 4.6,
         img: "",
         bio: "Michael has 10 years of experience implementing VAR solutions for enterprise clients across multiple industries.",
@@ -392,7 +392,7 @@ const testDataCourse = [
     details:
       "Maritime navigation training teaches participants the essential skills to navigate safely at sea, covering the use of navigation tools such as nautical charts and GPS systems, as well as understanding international regulations. Participants learn to plan routes, manage weather conditions, and ensure the safety of the vessel and crew. The training also includes rescue techniques and emergency management, ensuring effective and safe navigation while adhering to maritime rules.",
     duration: "50h",
-    students: 45,
+    students: 14,
     lessons: 35,
     rating: 4.7,
     price: 349.99,
@@ -438,7 +438,7 @@ const testDataCourse = [
       {
         name: "Captain Emily O'Connor",
         title: "Master Mariner",
-        students: 400,
+        students:14,
         rating: 4.9,
         img: "",
         bio: "Captain O'Connor has sailed over 100,000 nautical miles and brings real-world navigation experience to her teaching.",
@@ -456,7 +456,7 @@ const testDataCourse = [
     details:
       "The training on precious stones and metals provides an in-depth understanding of the characteristics, evaluation, and maintenance of these valuable materials. Participants learn to identify and evaluate precious stones and metals using quality and certification criteria. The training also covers treatment and maintenance techniques to preserve their value, as well as market trends and business practices. Additionally, it addresses ethical issues and sustainable practices related to the extraction and trade of these resources.",
     duration: "18h",
-    students: 90,
+    students: 19,
     lessons: 20,
     rating: 4.5,
     price: 179.99,
@@ -499,7 +499,7 @@ const testDataCourse = [
       {
         name: "David Goldstein",
         title: "Gemologist",
-        students: 600,
+        students: 16,
         rating: 4.8,
         img: "",
         bio: "David is a GIA-certified gemologist with 20 years of experience in the diamond and precious stone industry.",
@@ -517,7 +517,7 @@ const testDataCourse = [
     details:
       "Our Agriculture and Fishing service is designed to support and empower individuals and businesses involved in these vital sectors. We provide innovative solutions tailored to the unique challenges of farming and fishing industries, ensuring sustainable practices, enhanced productivity, and profitability.",
     duration: "35h",
-    students: 110,
+    students: 11,
     lessons: 28,
     rating: 4.4,
     price: 199.99,
@@ -563,7 +563,7 @@ const testDataCourse = [
       {
         name: "Dr. Amina Diallo",
         title: "Agricultural Specialist",
-        students: 550,
+        students: 15,
         rating: 4.7,
         img: "",
         bio: "Dr. Diallo has worked with farming communities across Africa to implement sustainable agricultural practices.",
@@ -581,7 +581,7 @@ const testDataCourse = [
     details:
       "The training in Earth sciences and seismology offers an in-depth understanding of geological processes, earthquake mechanisms, and techniques for assessing seismic risks. It covers fundamental principles of geology, tectonic plate movements, and earthquake causes, as well as methods for monitoring and predicting earthquakes. Participants also learn to assess seismic risks, develop strategies to reduce risks, and prepare infrastructure and communities for the impacts of earthquakes. This training is essential for researchers, engineers, and risk management professionals looking to enhance their expertise in seismology and risk reduction.",
     duration: "40h",
-    students: 65,
+    students: 16,
     lessons: 30,
     rating: 4.6,
     price: 279.99,
@@ -624,7 +624,7 @@ const testDataCourse = [
       {
         name: "Prof. Hiroshi Tanaka",
         title: "Seismologist",
-        students: 350,
+        students: 35,
         rating: 4.8,
         img: "",
         bio: "Professor Tanaka has published extensively on earthquake prediction and works with governments on disaster preparedness.",
@@ -641,7 +641,7 @@ const testDataCourse = [
     details:
       "The elevator training is designed to provide participants with a comprehensive understanding of elevator systems, from installation to maintenance. It covers the principles of elevator operation, safety procedures, and troubleshooting techniques. Participants will learn to install, maintain, and repair elevators while adhering to safety and regulatory standards. The training is ideal for technicians, engineers, and anyone involved in the elevator sector, offering the skills needed to ensure the proper functioning and safety of equipment.",
     duration: "60h",
-    students: 40,
+    students: 14,
     lessons: 40,
     rating: 4.5,
     price: 399.99,
@@ -687,7 +687,7 @@ const testDataCourse = [
       {
         name: "Carlos Mendez",
         title: "Elevator Engineer",
-        students: 300,
+        students: 13,
         rating: 4.7,
         img: "",
         bio: "Carlos has installed and maintained elevator systems for 15 years across commercial and residential projects.",
@@ -705,7 +705,7 @@ const testDataCourse = [
     details:
       "The training for driving trains and trams prepares participants to operate these vehicles safely and efficiently. It covers the technical aspects of driving, including handling controls, managing signaling systems, and adhering to safety procedures. Participants also learn to manage emergency situations, optimize energy consumption, and ensure passenger comfort. The training includes practical and theoretical simulations to develop in-depth skills in driving and managing railway and tramway operations while complying with current regulations",
     duration: "80h",
-    students: 55,
+    students: 15,
     lessons: 45,
     rating: 4.7,
     price: 499.99,
@@ -752,13 +752,81 @@ const testDataCourse = [
       {
         name: "Anna Kowalski",
         title: "Rail Operations Specialist",
-        students: 400,
+        students: 40,
         rating: 4.8,
         img: "",
         bio: "Anna has trained metro and tram operators for 10 years, focusing on safety and efficiency in urban transit systems.",
       },
     ],
-  },
+  },{
+    id: 16,
+    title: "Bus and Truck Driving Training",
+    description: "Bus and truck drivers operate commercial vehicles to safely transport passengers or goods over designated routes and distances.",
+    img: [
+      "https://res.cloudinary.com/dtcfvpu6n/image/upload/fl_preserve_transparency/v1746441263/Trucker_o9ioej.jpg?_s=public-apps"
+    ],
+    details: "This training prepares individuals to become skilled bus and truck drivers capable of safely operating commercial vehicles. It covers regulations, road safety, vehicle maintenance, cargo/passenger handling, and professional conduct. Trainees will learn how to operate buses on scheduled routes and trucks for freight transport over various distances. The program includes theoretical and practical modules, driving simulations, and on-road practice to ensure competence and confidence behind the wheel.",
+    duration: "100h",
+    students: 18,
+    lessons: 50,
+    rating: 4.6,
+    price: 599.99,
+    discount_price: 499.99,
+    options: ["Bus", "Truck"],
+    level: "Professional",
+    certificate_included: true,
+  access_duration: "2 years",
+    what_you_will_learn: [
+      "Safe vehicle operation techniques",
+      "Passenger and cargo management",
+      "Road regulations and compliance",
+      "Basic vehicle maintenance",
+      "Emergency procedures and protocols"
+    ],
+    requirements: [
+      "Valid driver’s license",
+      "Clean driving record",
+      "Physical fitness",
+      "Ability to follow road safety rules"
+    ],
+    curriculum: [
+      {
+        title: "Introduction to Commercial Driving",
+        duration: "10:00"
+      },
+      {
+        title: "Bus Driving Essentials",
+        duration: "20:00"
+      },
+      {
+        title: "Truck Operations and Logistics",
+        duration: "25:00"
+      },
+      {
+        title: "Road Safety and Regulations",
+        duration: "15:00"
+      },
+      {
+        title: "Emergency Handling and First Aid",
+        duration: "30:00"
+      },
+      {
+        title: "Hands-on Vehicle Training",
+        duration: "40:00"
+      }
+    ],
+    instructors: [
+      {
+        name: "John Miller",
+        title: "Certified Commercial Driving Instructor",
+        students: 15,
+        rating: 4.7,
+        img: "",
+        bio: "John has over 15 years of experience training drivers for both public transport and logistics sectors. His expertise ensures safe, efficient, and responsible driving."
+      }
+    ]
+  }
+  
 ];
 
 export default function handler(req, res) {

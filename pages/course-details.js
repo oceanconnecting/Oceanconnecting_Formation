@@ -258,35 +258,9 @@ export default function CounseDetails() {
                                                 </div>
                                             </div>
                                             <div className="courses__details-instructors">
-                                                <h4 className="title">Your Instructors</h4>
+                                              
                                                 <div className="courses__instructors-list">
-                                                    <div className="courses__instructors-item">
-                                                        <div className="courses__instructors-thumb">
-                                                            <Link href="/instructor-details"><img src="/assets/img/courses/details_instructors01.jpg" alt="img" /></Link>
-                                                        </div>
-                                                        <div className="courses__instructors-content">
-                                                            <h5 className="name"><Link href="/instructor-details">Robert Smith</Link></h5>
-                                                            <span className="designation">Graphic Design</span>
-                                                            <ul className="meta list-wrap d-flex flex-wrap">
-                                                                <li><i className="flaticon-user-1" /> 1,135 Students</li>
-                                                                <li><i className="flaticon-file" /> 05</li>
-                                                                <li>
-                                                                    <div className="rating">
-                                                                        <i className="fas fa-star" />
-                                                                        <i className="fas fa-star" />
-                                                                        <i className="fas fa-star" />
-                                                                        <i className="fas fa-star" />
-                                                                        <i className="fas fa-star" />
-                                                                        <span className="average">(4.2)</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                            <p>Donald Logan has more than 15 years’ experience as a project management consultant, educator, technology consultant, business know.</p>
-                                                            <div className="tg-button-wrap">
-                                                                <Link href="/instructor-details" className="btn btn-border tg-svg"><span className="text">See More</span> <span className="svg-icon" id="svg-btn1" data-svg-icon="assets/img/icons/btn-arrow.svg" /></Link>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                  
                                                     <div className="courses__instructors-item">
                                                         <div className="courses__instructors-thumb">
                                                             <Link href="/instructor-details"><img src="/assets/img/courses/details_instructors02.jpg" alt="img" /></Link>

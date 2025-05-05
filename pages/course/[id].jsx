@@ -370,7 +370,7 @@ const CourseSingle = () => {
                         }
                         alt="img"
                       />
-                      <VideoPopup />
+                  
                     </div>
                     <div className="event-cost-wrap">
                      
